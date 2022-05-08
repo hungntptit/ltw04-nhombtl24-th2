@@ -29,7 +29,7 @@ Mô tả cách làm
 	- deleteProcess(): thực hiện xoá sản phẩm 
 	- editProduct(): chuyển trang sửa sản phẩm
 	- doEditProduct(): kiểm tra lỗi và thực hiện cập nhật sản phẩm
-Thành viên:
+- Thành viên:
 	- Làm chung: hiển thị danh sách sản phẩm
 	- Đỗ Ngọc Cường: xoá sản phẩm
 	- Nguyễn Thanh Hùng: thêm sản phẩm, kiểm tra dữ liệu
