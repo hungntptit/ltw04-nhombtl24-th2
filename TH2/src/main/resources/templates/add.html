@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns=http://www.w3.org/1999/xhtml
+	xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>Add Product</title>
+<link rel="stylesheet" th:href="@{/styles.css}" />
+</head>
+
+<body>
+	<h1>Add Product</h1>
+	<form method="POST" th:action="@{/add}" th:object="${product}">
+		<label>Code</label>
+		<input type="text" th:field="*{code}">
+		<span class="validationError" th:if="${#fields.hasErrors('code')}"
+			th:errors="*{code}">Code Error</span>
+		<br />
+		<label>Description</label>
+		<input type="text" th:field="*{description}">
+		<span class="validationError"
+			th:if="${#fields.hasErrors('description')}"
+			th:errors="*{description}">Description Error</span>
+		<br />
+		<label>Price</label>
+		<input type="text" th:field="*{price}">
+		<span class="validationError" th:if="${#fields.hasErrors('price')}">Price
+			is a real number.</span>
+		<br />
+		<br>
+		<input type="submit" value="Add">
+		<a href="/display">
+			<input type="button" value="View Products">
+		</a>
+	</form>
+</body>
+
+</html>
